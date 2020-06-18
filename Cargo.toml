@@ -1,0 +1,13 @@
+[package]
+name = "space_explorer"
+version = "0.1.0"
+authors = ["shenge86 <shenge86@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "2.27.1"
+rand = { git = "https://github.com/rust-lang-nursery/rand" } # from online repo
+#restaurant = { path = "./restaurant" }
+
