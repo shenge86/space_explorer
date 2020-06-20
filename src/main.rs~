@@ -3,6 +3,12 @@ use std::io;
 use rand::Rng;
 
 // internal libraries
+// extern crate events
+// HELP:
+// https://doc.rust-lang.org/stable/rust-by-example/mod/split.html
+mod events;
+mod spaceship;
+
 mod front_of_house;
 use front_of_house::hosting::add_to_waitlist as addw;
 
@@ -20,25 +26,12 @@ fn main() {
     println!("SPACE EXPLORER");
     println!("An interstellar exploration game by Shen Ge Creative");
     println!("=================================");
-    println!("Before the launch, you decide to eat first.");
-    ready_to_eat();
+    events::initiate();
+//    events::general::start();
+//    events::asteroid_strike::initiate();
+    println!("I ask myself. Am I really ready to start this adventure? (Y/N)");
+    space_explorer::question();
     
-    println!("Would you like to read the instructions? At any time, you can type instruct to see this again.");
-    
-    println!("Ready to start? (Y/N)");
-    let mut input = String::new();
-
-    let mut len = 0;
-    while input != "Y" {
-        io::stdin().read_line(&mut input).expect("Please try another input.");
-   //      let len = input.len();
-        len = input.len();
-        input.truncate(len-1);
-//        input.chars().last().unwrap();
-//        trim_newline(&input);
-        ready(&input);
-    }
-
     // print stats
     print_const(max_speed, min_person);
     print_stats(num_person,speed);
@@ -53,7 +46,6 @@ fn main() {
     print_stats(num_person,speed);
 }
 
-// I/O FUNCTIONS
 
 
 // SETTING VALUE FUNCTIONS
@@ -80,18 +72,7 @@ fn print_stats(num_person: i32, speed: u32) {
     println!("Spacecraft speed: {}", speed);
 }
 
-fn ready(input: &std::string::String) {
-    println!("{}",input);
-    if input == "Y" {
-        println!("Starting!");
-        for number in (1..10).rev() {
-            println!("{}",number);
-        }
-        println!("LIFTOFF! Your spacecraft takes off slowly but quickly reaches its maximum speed. Spaceflight is routine these days and this definitely isn't your first rodeo. Yet, every time you're still brimming with excitement like your first time up as a 9-year-old when the launch actually occurs. This time is SPECIAL since you're leaving the solar system! You emit an especially loud squeal much to the embarassment of your first mate (yes, he glanced at you with a rather annoyed expression). In less than a minute, you and your crew are weightless. After all this time, humanity still has not figured out artificial gravity much to everyone's surprise. Well, true artificial gravity. A spinning space station doesn't count. You are glad that you're wearing your seat belt and that everyone else appears to be as well. All the essential items have been bolted down though you do see a few drops of kool-aid floating around. Someone will be reprimanded for that oversight, you thought.");
-    }
-}
-
-fn read_to_eat() {
+fn ready_to_eat() {
     addw();
     space_explorer::eat();
 }
