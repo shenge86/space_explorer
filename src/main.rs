@@ -29,10 +29,8 @@ fn main() {
     events::initiate();
 //    events::general::start();
 //    events::asteroid_strike::initiate();
-    println!("I ask myself. Am I really ready to start this adventure? (Y/N)");
-    space_explorer::question();
-
-    spaceship::test();
+//    space_explorer::question();
+//    spaceship::test();
     
     // print stats
     print_const(max_speed, min_person);
