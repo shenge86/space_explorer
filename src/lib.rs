@@ -6,6 +6,30 @@ mod front_of_house;
 // get the module called hosting inside the file called front_of_house.rs
 pub use crate::front_of_house::hosting;
 
+
+// SPACESHIP CLASS
+pub struct Spaceship {
+    pub engine_type: String,
+    pub armor: u32,
+    pub shield: u32
+}
+
+
+impl Spaceship {
+    pub fn build_spaceship(engine_type: String, armor: u32, shield: u32) -> Spaceship {
+        Spaceship {
+            engine_type,
+            armor,
+            shield,
+        }
+    }
+}
+
+
+
+
+// FUNCTIONS
+
 // declare some functions
 pub fn eat() {
     println!("I am ready to eat!");

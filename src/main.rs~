@@ -30,7 +30,15 @@ fn main() {
 //    events::general::start();
 //    events::asteroid_strike::initiate();
 //    space_explorer::question();
-    spaceship::test();
+//     spaceship::test();
+//    let sc = space_explorer::Spaceship::create_default();
+//    let sc = space_explorer::Spaceship {
+//        engine_type:String::from("Fusion"),
+//        armor: 100,
+//        shield: 100,
+//        };
+    let sc = space_explorer::Spaceship::build_spaceship(String::from("Fusion"),100,100);
+    println!("{}",sc.armor);
     
     // print stats
     print_const(max_speed, min_person);
