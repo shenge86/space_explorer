@@ -41,7 +41,7 @@ fn main() {
     let sc = space_explorer::Spaceship::build_spaceship(String::from("Fusion"),100,100);
     println!("{}",sc.armor);
 
-    events::quotes();
+    event::quotes();
     
     // print stats
     print_const(max_speed, min_person);
