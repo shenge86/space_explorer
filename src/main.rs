@@ -27,6 +27,7 @@ fn main() {
     println!("An interstellar exploration game by Shen Ge Creative");
     println!("=================================");
     events::initiate();
+    events::qa1();
 //    events::general::start();
 //    events::asteroid_strike::initiate();
 //    space_explorer::question();
