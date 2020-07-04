@@ -41,7 +41,7 @@ impl Engine {
         }
     }
 
-    pub fn printstats(&self) {
+    pub fn print_engine(&self) {
         println!("Name: {}", self.name);
         println!("Cost: {}", self.cost);
     }

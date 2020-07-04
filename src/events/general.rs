@@ -26,8 +26,9 @@ pub fn quote() {
     s.push("Before love comes respect for who that person is and so it's unlikely I will fall in love with a sociopath.");
     s.push("It's a never-ending queue!");
     s.push("We've been talking for 5 hours?! What the hell is wrong with you?");
+    s.push("No rest means no rust.");
 
-    println!("{}",&s.len());
+//    println!("{}",&s.len());
 
     // Get a random quote
     let si = rand::thread_rng().gen_range(0,s.len());

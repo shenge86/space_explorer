@@ -27,7 +27,7 @@ pub fn quote() {
     s.push("It's a never-ending queue!");
     s.push("We've been talking for 5 hours?! What the hell is wrong with you?");
 
-    println!("{}",&s.len());
+//    println!("{}",&s.len());
 
     // Get a random quote
     let si = rand::thread_rng().gen_range(0,s.len());
