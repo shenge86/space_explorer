@@ -45,15 +45,36 @@ impl Engine {
 
     // constructor 2
     pub fn build_engine_id(id:u32) -> Engine {
-        Engine {
-            id,
-            name = 'BLAH',
-            cost = 1000
+        if id == 1 {
+            println!("hello");
+            Engine {
+                id,
+                name: "EM Drive".to_string(),
+                cost: 30000
+            }
+        } else if id == 2 {
+            Engine {
+                id,
+                name: "helical".to_string(),
+                cost: 5000,
+            }
+        } else if id == 3 {
+            Engine {
+                id,
+                name: "ramjet".to_string(),
+                cost: 10000,
+            }
+        } else {
+            Engine {
+                id,
+                name: "chemical".to_string(),
+                cost: 100,
+            }
         }
     }
 
     pub fn printstats(&self) {
-        println!("ID: {}", self.id)
+        // println!("ID: {}", self.id);
         println!("Name: {}", self.name);
         println!("Cost: {}", self.cost);
     }

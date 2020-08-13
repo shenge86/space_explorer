@@ -33,46 +33,55 @@ pub fn qa1() -> space_explorer::Engine {
     let mut s = answer.to_string();
     s.pop();
 
+    let id: u32;
     let c: u32;
-
+    
     match &s[..] {
         "1" | "EM Drive" 
             => {
+                id = 1;
                 s = "EM Drive".to_string();
                 c = 75
             },
         "2" | "Helical" 
             => {
+                id = 2;
                 s = "Helical".to_string();
                 c = 300
             },
         "3" | "Ramjet" 
             => {
+                id = 3;
                 s = "Ramjet".to_string();
                 c = 800
             },
         "4" | "Fission" 
             => {
+                id = 4;
                 s = "Fission".to_string();
                 c = 500
             },
         "5" | "Fusion" 
             => {
+                id = 5;
                 s = "Fusion".to_string();
                 c = 2000
             },
         "6" | "Antimatter" 
             => {
+                id = 6;
                 s = "Antimatter".to_string();
                 c = 2500
             },
          _  => {
-                println!("I could not decide and decided to go with the traditional Fission.");
-                s = "Fission".to_string();
-                c = 500
+                id = 0;
+                println!("I considered buying the cheapest engine: a chemical engine.");
+                println!("This won't take us to the stars but maybe it can take us to another outpost with cheaper prices.");
+                s = "chemical".to_string();
+                c = 0
            },
     }
-
+    
     println!("At the time I had purchased, I asked the merchant, \"How much is the {} engine and what are its capabilities?\"", s);
 
     // let engine = space_explorer::Engine::build_engine(1,String::from(s),c);

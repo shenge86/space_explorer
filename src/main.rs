@@ -25,7 +25,7 @@ fn main() {
     let mut speed = 299_001;
 
     // ready for game
-    println!("SPACE EXPLORER");
+    println!("SPACE EXPLORERS");
     println!("An interstellar exploration game by Shen Ge Creative");
     println!("=================================");
     events::initiate();
