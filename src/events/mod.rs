@@ -73,9 +73,10 @@ pub fn qa1() -> space_explorer::Engine {
            },
     }
 
-    println!("At the time I had purchased, I asked the tradeswoman, \"How much is the {} engine and what are its capabilities?\"", s);
+    println!("At the time I had purchased, I asked the merchant, \"How much is the {} engine and what are its capabilities?\"", s);
 
-    let engine = space_explorer::Engine::build_engine(String::from(s),c);
+    // let engine = space_explorer::Engine::build_engine(1,String::from(s),c);
+    let engine = space_explorer::Engine::build_engine_id(id);
     engine
     
     /*

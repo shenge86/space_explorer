@@ -28,20 +28,32 @@ impl Spaceship {
 
 // a spaceship has an engine
 pub struct Engine {
+    pub id: u32,
     pub name: String,
     pub cost: u32
 }
 
 impl Engine {
     // constructor
-    pub fn build_engine(name: String, cost: u32) -> Engine {
+    pub fn build_engine(id: u32, name: String, cost: u32) -> Engine {
         Engine {
+            id,
             name,
             cost,
         }
     }
 
+    // constructor 2
+    pub fn build_engine_id(id:u32) -> Engine {
+        Engine {
+            id,
+            name = 'BLAH',
+            cost = 1000
+        }
+    }
+
     pub fn printstats(&self) {
+        println!("ID: {}", self.id)
         println!("Name: {}", self.name);
         println!("Cost: {}", self.cost);
     }
