@@ -4,7 +4,7 @@ use rand::Rng;
 
 // internal libraries
 // extern crate events
-// HELP:
+// Help Files
 // https://doc.rust-lang.org/stable/rust-by-example/mod/split.html
 mod events;
 mod spaceship;
