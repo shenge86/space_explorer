@@ -4,7 +4,7 @@ use rand::Rng;
 
 // internal libraries
 // extern crate events
-// Help Files
+// Help links:
 // https://doc.rust-lang.org/stable/rust-by-example/mod/split.html
 mod events;
 mod spaceship;
@@ -12,6 +12,8 @@ mod spaceship;
 mod front_of_house;
 use front_of_house::hosting::add_to_waitlist as addw;
 
+
+// ===========MAIN GAME================ //
 fn main() {
     const max_speed: u32 = 300_000; // max spaceship velocity cannot be over speed of light in m/s
     const min_person: u32 = 100; // min number of people below which you lose
